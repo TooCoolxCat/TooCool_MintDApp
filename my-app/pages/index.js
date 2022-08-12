@@ -36,7 +36,9 @@ export default function Home() {
 
   const [transactionHash, setTransactionHash] = useState("");
   const [tokenAddress, setTokenAddress] = useState("");
-  
+  const [receiveTokenAddress,setReceiveTokenAddress] = useState(false);
+
+
   const checkIfPresaleStarted = async () => {
     try {
       const provider = await getProviderOrSigner();
@@ -199,16 +201,21 @@ export default function Home() {
         // We are parsing `0.01` string to ether using the utils library from ethers.js
         value: utils.parseEther("0.0"),
       });
+
+      // console.table(tx);
       setLoading(true);
       await tx.wait();
       setLoading(false);
 
-      const transactionHash = await tx.hash;
+      const transactionHash = tx.hash;
+
       setTransactionHash(transactionHash);
       const tokenAddress = "https://rinkeby.etherscan.io/tx/" + transactionHash;
       setTokenAddress(tokenAddress);
 
-      
+      receiveTokenAddress = true;
+      setReceiveTokenAddress(true);
+
       window.alert("OMG! ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆ You are TooCool!");
       return tokenAddress;
 
@@ -248,17 +255,26 @@ export default function Home() {
     
       //_tokenIds is a `Big Number`. We need to convert the Big Number to a string
       setTokenIdsMinted(_tokenIds.toString());
-
-      if (transactionHash == 0){
-        const tokenAddress = "https://opensea.io/collection/toocooldolander";
-        setTokenAddress(tokenAddress);
-        //console.log(tokenAddress);
-      }
     } catch (err) {
       console.error(err);
     }
   };
+//
+const checkTransactionAddress = async () => {
+  try {
 
+    if (transactionHash == 0){
+      const tokenAddress = "https://opensea.io/collection/toocooldolander";
+      setTokenAddress(tokenAddress);
+      receiveTokenAddress = false;
+    }
+    setReceiveTokenAddress(receiveTokenAddress);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+////
   const checkifSoldOut = async () => {
     try {
       const provider = await getProviderOrSigner();
@@ -335,6 +351,7 @@ export default function Home() {
         checkIfPresaleEnded();
       }
       getTokenIdsMinted();
+      checkTransactionAddress();
       checkifSoldOut();
 
    
@@ -506,7 +523,7 @@ return (
     if (!walletConnected) {
       return (
       <div className={styles.buttonContainer}>
-         <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" />
+         {/* <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" /> */}
       </div>
       );
     }
@@ -603,7 +620,6 @@ return (
              {renderButton()}
           </div>
      
-        {/* <img className={styles.screenPop}  src="./ele/popImage.gif" alt="pop-content" /> */}
         </div>
       </div>
 

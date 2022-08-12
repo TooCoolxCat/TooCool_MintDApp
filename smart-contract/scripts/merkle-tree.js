@@ -3,7 +3,6 @@ const { MerkleTree } = require("merkletreejs");
 
 let whitelistAddresses = [
     "0x48cE884A1ecead469c50b42370aF2983D59Bbb94",//JQ
-    "0xd38796bd8455c30632929B4384a0b5865aeBb9DB",//JQ
     "0x1734A28705322cBa314DBC63706267C95eAf94C6",//chun
     "0x813963b05bcE179693d5f867e30d8F38b8C6a6d0",//rui
     "0xA49a3aE63C366F41B78B282fc502FA3B12728b0D", //mark
@@ -12,6 +11,8 @@ let whitelistAddresses = [
     "0xFe543b368B6Fb3b31c545E449668Cfbb87E7cF8d",//doug
     "0xFfBf41a0C23E05e491BEd7514B9558e71c0ED521",//ayu
     "0x9aCD5c7fe0870FC7ddB0d250a6C69A8d19f83C35",//Paul
+    "0x45b0783784f95d7fe5BC43aC8F28Fd5BB91d224d",//nabcom
+    "0xd38796bd8455c30632929B4384a0b5865aeBb9DB",//JQ
 ];
 
 // Create a new array of `leafNodes` by hashing all indexes of the `whitelistAddresses`
