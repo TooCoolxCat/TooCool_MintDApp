@@ -203,7 +203,7 @@ export default function Home() {
       await tx.wait();
       setLoading(false);
 
-      const transactionHash = tx.hash;
+      const transactionHash = await tx.hash;
       setTransactionHash(transactionHash);
       const tokenAddress = "https://rinkeby.etherscan.io/tx/" + transactionHash;
       setTokenAddress(tokenAddress);
