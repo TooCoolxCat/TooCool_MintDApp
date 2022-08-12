@@ -390,6 +390,8 @@ const checkTransactionAddress = async () => {
   /*
     renderDescription: Returns description of the state of the dapp
   */
+ const renderDescription =() => {
+   // If wallet is not connected, return a button which allows them to connect their wallet
 
 if (!walletConnected) {
   return (
