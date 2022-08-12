@@ -2,6 +2,8 @@ import { Contract, ethers, providers, utils} from "ethers";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
+
+
 import { abi, NFT_CONTRACT_ADDRESS} from "../constants";
 import styles from "../styles/Home.module.css";
 import { addressList } from "../address";
@@ -286,12 +288,15 @@ export default function Home() {
    *
    * @param {*} needSigner - True if you need the signer, default false otherwise
    */
+  
   const getProviderOrSigner = async (needSigner = false) => {
 
+  
     let web3Modal = new Web3Modal({
       network: "Rinkeby",
       cacheProvider: false,
-      providerOptions: {},
+      providerOptions: {
+      },
       disableInjectedProvider: false,
     });
 
@@ -322,42 +327,27 @@ export default function Home() {
   // In this case, whenever the value of `walletConnected` changes - this effect will be called
   useEffect(() => {
     // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
-    
-      // Assign the Web3Modal class to the reference object by setting it's `current` value
-      // The `current` value is persisted throughout as long as this page is open
-      if (walletConnected) {
-      checkifClaimed();
-      checkifValid();
-    
+    if (walletConnected) {
       const presaleStarted = checkIfPresaleStarted();
       
       // if started = true, then check if it has ended
       if (presaleStarted) {
         checkIfPresaleEnded();
       }
-  
       getTokenIdsMinted();
       checkifSoldOut();
 
-     // set an interval to get the number of token Ids minted every 5 seconds
-      setInterval(async function () {
-        await getTokenIdsMinted();
-        await checkifClaimed();
-        await checkifSoldOut();
-      }, 3 * 1000);
-    }
+   
+        checkifClaimed();
+        checkifValid();   
 
-    else{
-       getTokenIdsMinted();
-       checkifSoldOut();
-
-        // set an interval to get the number of token Ids minted every 5 seconds
+      // set an interval to get the number of token Ids minted every 3 seconds
         setInterval(async function () {
           await getTokenIdsMinted();
           await checkifClaimed();
           await checkifSoldOut();
-        }, 5 * 1000);
-    }
+        }, 3 * 1000);
+      }
   }, [walletConnected]);
 
   /*
@@ -385,18 +375,30 @@ export default function Home() {
   */
  const renderDescription =() => {
    // If wallet is not connected, return a button which allows them to connect their wallet
-   if (!walletConnected) {
+   if (!walletConnected && !presaleStarted) {
     return (
       <div>
         <div className={styles.descriptionLarge}>
-           3333 <br></br><br></br>TOOCOOL
+           3333 <br></br><br></br>FREE MINT
         </div>
         <div className={styles.description}>
-           FREE MINT PARTY
+           AUGUST 12, 7PM UTC  
         </div>
-
       </div>
     );
+}
+
+if (!walletConnected && presaleStarted) {
+  return (
+    <div>
+      <div className={styles.descriptionLarge}>
+         3333 <br></br><br></br>NOW
+      </div>
+      <div className={styles.description}>
+         FREE MINT PARTY
+      </div>
+    </div>
+  );
 }
 
 if(!walletConnected && soldOut){
@@ -452,6 +454,8 @@ return (
           have been minted
         </div>
         <div className={styles.description}>
+            Opps...Not your turn
+            <br></br><br></br>
             Public sale: August 13th
         </div>
       </div>
@@ -498,14 +502,15 @@ return (
 }
 
   const renderButton = () => {
-    //connect wallet
+    //connect wallet, uncheck the connectwallet button after presale starts
     if (!walletConnected) {
       return (
       <div className={styles.buttonContainer}>
-          <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" />
+         <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" />
       </div>
       );
     }
+
     if (loading) {
       return (
         <div className={styles.buttonContainer}>
@@ -567,6 +572,9 @@ return (
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className = {styles.nav}>
+        
+      {/* <a href="https://icy.tools/calendar" target="_blank"> <img src="https://cdn.icy.tools/images/icy-tools-light.svg" alt="as seen on icy.tools" width="256" /></a> */}
+            
           <button className = {styles.socialmediaBtn} type="button"> 
               <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
                 <img className = {styles.socialmediaIMG} src="./ele/btn-opensea.png" alt="opensea-logo" />

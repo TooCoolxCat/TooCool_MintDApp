@@ -80,7 +80,7 @@ contract TooCoolDolander is ERC721A, Ownable, ReentrancyGuard{
 
     modifier passBeautyCheck {
       require(balanceOf(msg.sender) == 0, "ONE TOOCOOL PER WALLET");
-      require(totalSupply() + maxTOOCOOLPerTx < maxBeauty, "EXCEED MAX BEAUTY");
+      require(totalSupply() + maxTOOCOOLPerTx <= maxBeauty, "EXCEED MAX BEAUTY");
       _;
     }
 
@@ -157,7 +157,7 @@ contract TooCoolDolander is ERC721A, Ownable, ReentrancyGuard{
     }
 
   function toocoolTreats(address _lover, uint256 _kiss) external onlyOwner {
-    require(totalSupply() + _kiss < maxBeauty, "EXCEED MAX BEAUTY");
+    require(totalSupply() + _kiss <= maxBeauty, "EXCEED MAX BEAUTY");
     _safeMint(_lover, _kiss);
   }
 
