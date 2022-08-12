@@ -10,15 +10,20 @@ async function main() {
    const previewURL = PREVIEW_URL;
 
    const Contract = await ethers.getContractFactory("TooCoolDolander");
- 
+
    const contract = await Contract.deploy(
-     metadataURL, previewURL
+     metadataURL, previewURL, 
+     {gasPrice: ethers.utils.parseUnits('27', 'gwei'), 
+     gasLimit: 4000000,
+     nonce:0}
    );
 
    await contract.deployed();
    
    console.log('Contract deployed to:', contract.address);
  }
+
+
 
 main()
 .then(()=>process.exit(0))

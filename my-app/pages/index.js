@@ -172,7 +172,7 @@ export default function Home() {
 
       const transactionHash = tx.hash;
       setTransactionHash(transactionHash);
-      const tokenAddress = "https://rinkeby.etherscan.io/tx/" + transactionHash;
+      const tokenAddress = "https://etherscan.io/tx/" + transactionHash;
       setTokenAddress(tokenAddress);
 
      
@@ -210,7 +210,7 @@ export default function Home() {
       const transactionHash = tx.hash;
 
       setTransactionHash(transactionHash);
-      const tokenAddress = "https://rinkeby.etherscan.io/tx/" + transactionHash;
+      const tokenAddress = "https://etherscan.io/tx/" + transactionHash;
       setTokenAddress(tokenAddress);
 
       receiveTokenAddress = true;
@@ -309,7 +309,7 @@ const checkTransactionAddress = async () => {
 
   
     let web3Modal = new Web3Modal({
-      network: "Rinkeby",
+      network: "mainnet",
       cacheProvider: false,
       providerOptions: {
       },
@@ -325,9 +325,9 @@ const checkTransactionAddress = async () => {
 
     // If user is not connected to the Mumbai network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 1) {
+      window.alert("Change the network to Mainnet");
+      throw new Error("Change network to Mainnet");
     }
 
     if (needSigner) {
@@ -390,22 +390,8 @@ const checkTransactionAddress = async () => {
   /*
     renderDescription: Returns description of the state of the dapp
   */
- const renderDescription =() => {
-   // If wallet is not connected, return a button which allows them to connect their wallet
-   if (!walletConnected && !presaleStarted) {
-    return (
-      <div>
-        <div className={styles.descriptionLarge}>
-           3333 <br></br><br></br>FREE MINT
-        </div>
-        <div className={styles.description}>
-           AUGUST 12, 7PM UTC  
-        </div>
-      </div>
-    );
-}
 
-if (!walletConnected && presaleStarted) {
+if (!walletConnected) {
   return (
     <div>
       <div className={styles.descriptionLarge}>
@@ -523,7 +509,7 @@ return (
     if (!walletConnected) {
       return (
       <div className={styles.buttonContainer}>
-         {/* <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" /> */}
+         <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" />
       </div>
       );
     }
