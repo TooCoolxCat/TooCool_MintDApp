@@ -397,10 +397,11 @@ if (!walletConnected) {
   return (
     <div>
       <div className={styles.descriptionLarge}>
-         3333 <br></br><br></br>NOW
+      3333 <br></br> SOLD OUT!
       </div>
       <div className={styles.description}>
-         FREE MINT PARTY
+      Get your TooCool <br></br>
+       @ marketplace 🥳
       </div>
     </div>
   );
@@ -511,7 +512,9 @@ return (
     if (!walletConnected) {
       return (
       <div className={styles.buttonContainer}>
-         <img className={styles.buttonImage} onClick={connectWallet} src="./ele/btn-connectwallet.gif"  alt=" Button" />
+         <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
+             <img className={styles.buttonImage} src="./ele/btn-viewnft.gif"  alt=" Button" />     
+         </a>
       </div>
       );
     }
