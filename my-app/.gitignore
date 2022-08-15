@@ -14,7 +14,8 @@
 
 # production
 /build
-
+/pages/spicyFight.js
+/pages/components
 # misc
 .DS_Store
 *.pem
