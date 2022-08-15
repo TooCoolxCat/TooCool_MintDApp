@@ -581,8 +581,8 @@ return (
       </Head>
       <div className = {styles.nav}>
         
-          <a href="https://nftspy.net/rarity/toocooldolander" target="_blank">
-            <img  className = {styles.socialmediaIMG} src="https://media.nftspy.net/BannerBlack.webp"/>
+          <a href="https://nftspy.net/rarity/toocooldolander" target="_blank" rel="noreferrer">
+            <img  className = {styles.socialmediaIMG} src="https://media.nftspy.net/BannerBlack.webp" alt="nftspy-logo"/>
           </a>            
           <button className = {styles.socialmediaBtn} type="button"> 
               <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
