@@ -397,7 +397,7 @@ if (!walletConnected) {
   return (
     <div>
       <div className={styles.descriptionLarge}>
-      3333 <br></br> SOLD OUT!
+      3333 <br></br> SOLD OUT❣️
       </div>
       <div className={styles.description}>
       Get your TooCool <br></br>
