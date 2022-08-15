@@ -581,8 +581,9 @@ return (
       </Head>
       <div className = {styles.nav}>
         
-      {/* <a href="https://icy.tools/calendar" target="_blank"> <img src="https://cdn.icy.tools/images/icy-tools-light.svg" alt="as seen on icy.tools" width="256" /></a> */}
-            
+          <a href="https://nftspy.net/rarity/toocooldolander" target="_blank">
+            <img  className = {styles.socialmediaIMG} src="https://media.nftspy.net/BannerBlack.webp"onmouseover="this.style.filter = 'brightness(90%)'" onmouseout="this.style.filter=''"/>
+          </a>            
           <button className = {styles.socialmediaBtn} type="button"> 
               <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
                 <img className = {styles.socialmediaIMG} src="./ele/btn-opensea.png" alt="opensea-logo" />
