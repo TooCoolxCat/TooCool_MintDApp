@@ -8,7 +8,7 @@
 
 .app{
   min-height: 90vh;
-  background-image: url(/ele/background_1.png);
+  background-image: url(/ele/Background_1.png);
   background-repeat: repeat;
   background-size: auto;
   background-position: fixed; 
@@ -57,9 +57,9 @@
 .screenContainer{
   position: relative;
   text-align: center;
-  margin-top:15%;
+  margin-top:10%;
   width:80%;
-  left:-10%;
+  left:0%;
 
 }
 
@@ -164,19 +164,19 @@
 }
 .item_AboutTeam{
   width:100%;
-  transform: translate(0%, 0%);
+  transform: translate(15%, 0%);
 }
 .item_Benefit{  
   width:60%;
-  transform: translate(60%, -15%);
+  transform: translate(50%, -15%);
 }
 .item_AboutNFT{
-  width:50%;
-  transform: translate(60%, 20%);  
+  width:55%;
+  transform: translate(50%, 25%);  
 }
 .item_AboutDodo{
   width:90%;
-  transform: translate(0%, -15%);  
+  transform: translate(0%, -10%);  
   order:2;
 }
 
@@ -239,13 +239,13 @@
   .screenContainer{
     position: absolute;
     margin-top:30%;
-    width:100%;
+    width: 110%;
     left:-10%;
     text-align: center;
   }
   .screenContent{
     position: absolute;
-    width:40%;
+    width:100%;
     top: 45%;
     left: 52%;
     transform: translate(-50%, -50%);
@@ -293,7 +293,7 @@
     /* align-items: center; */
     flex-wrap: wrap;
     gap:2rem;
-    margin-top:120%;
+    margin-top:110%;
   }
   .flexbox_item{
     max-width:100vw;
@@ -302,15 +302,15 @@
   }
   .flexbox_item:nth-child(1){
     width: 100vw;
-    height:350px;
+    height:60vw;
   }
   .flexbox_item:nth-child(2){
     width:100vw;
-    height:400px;
+    height:80vw;
   }
   .flexbox_item:nth-child(3){
     width:100vw;
-    height:400px;
+    height:80vw;
   }
   .flexbox_item:nth-child(4){
     width:100vw;
@@ -326,7 +326,7 @@
     width:80%;
     height:auto;
     top: 0%;
-    left: 0%;
+    left:-5%;
     transform: translate(25%, 0%);
   }
   .item_Benefit{  
