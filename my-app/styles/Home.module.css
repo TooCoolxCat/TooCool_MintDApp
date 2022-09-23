@@ -11,7 +11,8 @@
   background-image: url(/ele/background_1.png);
   background-repeat: repeat;
   background-size: auto;
-  background-position: fixed;
+  background-position: fixed; 
+  overflow: hidden;
 }
 .nav{
   height:55px;
@@ -56,6 +57,10 @@
 .screenContainer{
   position: relative;
   text-align: center;
+  margin-top:15%;
+  width:80%;
+  left:-10%;
+
 }
 
 .description {
@@ -150,26 +155,26 @@
   height:450px;
 }
 
-.item_AboutTooCoolDesktop{
+.item_AboutTooCool{
   position: absolute;
   width:35%;
   height:50%;
   top: 20%;
   left: 65%;
 }
-.item_AboutTeamDesktop{
+.item_AboutTeam{
   width:100%;
   transform: translate(0%, 0%);
 }
-.item_BenefitDesktop{  
+.item_Benefit{  
   width:60%;
   transform: translate(60%, -15%);
 }
-.item_AboutNFTDesktop{
+.item_AboutNFT{
   width:50%;
   transform: translate(60%, 20%);  
 }
-.item_AboutDodoDesktop{
+.item_AboutDodo{
   width:90%;
   transform: translate(0%, -15%);  
   order:2;
@@ -204,6 +209,7 @@
     background-size: cover;
     overflow: hidden;
   }
+
   .main {
     width: 100%;
     flex-direction: column;
@@ -232,9 +238,9 @@
 
   .screenContainer{
     position: absolute;
-    margin-top:25%;
-    width:160%;
-    left:-30%;
+    margin-top:30%;
+    width:100%;
+    left:-10%;
     text-align: center;
   }
   .screenContent{
@@ -315,7 +321,7 @@
     height:450px;
   }
   
-  .item_AboutTooCoolDesktop{
+  .item_AboutTooCool{
     position: relative;
     width:80%;
     height:auto;
@@ -323,19 +329,19 @@
     left: 0%;
     transform: translate(25%, 0%);
   }
-  .item_BenefitDesktop{  
+  .item_Benefit{  
     width:70%;
     transform: translate(30%, -18%);
   }
-  .item_AboutNFTDesktop{
+  .item_AboutNFT{
     width:80%;
     transform: translate(10%, -40%);  
   }
-  .item_AboutDodoDesktop{
+  .item_AboutDodo{
     width:120%;
     transform: translate(-20%, -30%);  
   }
-  .item_AboutTeamDesktop{
+  .item_AboutTeam{
     width:100%;
     transform: translate(0%, 0%);
   }

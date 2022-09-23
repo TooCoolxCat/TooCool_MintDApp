@@ -615,37 +615,37 @@ return (
 
           <div  className={styles.flexbox_desktop}>
             <div className={styles.flexbox_item}>
-              <img className={styles.item_AboutTooCoolDesktop} src="./ele/AboutTooCool.png" alt="AboutTooCool" />
+              <img className={styles.item_AboutTooCool} src="./ele/AboutToocool.png" alt="AboutTooCool" />
             </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutTeamDesktop} src="./ele/AboutTeam.png" alt="AboutTeam" />
+               <img  className={styles.item_AboutTeam} src="./ele/AboutTeam.png" alt="AboutTeam" />
             </div>
             <div className={styles.flexbox_item}> 
-               <img  className={styles.item_BenefitDesktop}src="./ele/Benefits.png" alt="Benefits" />
+               <img  className={styles.item_Benefit}src="./ele/Benefits.png" alt="Benefits" />
             </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutNFTDesktop}  src="./ele/AboutNFT.png" alt="AboutNFT" />
+               <img  className={styles.item_AboutNFT}  src="./ele/AboutNFT.png" alt="AboutNFT" />
              </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutDodoDesktop}  src="./ele/AboutDodo.png" alt="AboutDodo" /> 
+               <img  className={styles.item_AboutDodo}  src="./ele/AboutDodo.png" alt="AboutDodo" /> 
             </div>           
           </div>
 
           <div  className={styles.flexbox_mobile}>
             <div className={styles.flexbox_item}>
-              <img className={styles.item_AboutTooCoolDesktop} src="./ele/AboutTooCool.png" alt="AboutTooCool" />
+              <img className={styles.item_AboutTooCool} src="./ele/AboutToocool.png" alt="AboutTooCool" />
             </div>
             <div className={styles.flexbox_item}> 
-              <img  className={styles.item_BenefitDesktop}src="./ele/Benefits_mobile.png" alt="Benefits" />
+              <img  className={styles.item_Benefit}src="./ele/Benefits_mobile.png" alt="Benefits" />
             </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutNFTDesktop}  src="./ele/AboutNFT_mobile.png" alt="AboutNFT" />
+               <img  className={styles.item_AboutNFT}  src="./ele/AboutNFT_mobile.png" alt="AboutNFT" />
             </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutDodoDesktop}  src="./ele/AboutDodo_mobile.png" alt="AboutDodo" /> 
+               <img  className={styles.item_AboutDodo}  src="./ele/AboutDodo_mobile.png" alt="AboutDodo" /> 
             </div>
             <div className={styles.flexbox_item}>
-               <img  className={styles.item_AboutTeamDesktop} src="./ele/AboutTeam_mobile.png" alt="AboutTeam" />
+               <img  className={styles.item_AboutTeam} src="./ele/AboutTeam_mobile.png" alt="AboutTeam" />
             </div>
 
           </div>
