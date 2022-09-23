@@ -221,13 +221,13 @@
     position:absolute;
     left:auto;
     top:32px;
-    margin-left:13px;
+    margin-left:10px;
   }
 
   .socialmediaIMG {
     width:auto;
     height:40px;
-    padding-right:13px;
+    padding-right:5px;
   }
 
   .title {
@@ -338,7 +338,7 @@
     transform: translate(10%, -40%);  
   }
   .item_AboutDodo{
-    width:120%;
+    width:140%;
     transform: translate(-20%, -30%);  
   }
   .item_AboutTeam{
@@ -363,7 +363,7 @@
   .footerNav{
     position: absolute;
     right:0;
-    transform: translate(0%, -250%); 
+    transform: translate(0%, -200%); 
   }
   .catItem{
     display:none;
