@@ -651,8 +651,8 @@ return (
           </div>
 
            <div className={styles.footer}>
-           <img  className={styles.item_Roadmap}  src="./ele/Roadmap.png" alt="AboutDodo" />
            <img  className={styles.item_Roadmap_mobile}  src="./ele/Roadmap_mobile.png" alt="AboutDodo" />
+           <img  className={styles.item_Roadmap}  src="./ele/Roadmap.png" alt="AboutDodo" />
               <div className={styles.footerNav}>
               <img  className={`${styles.socialmediaBtn} ${styles.catItem}`} src="./ele/catIcon.png" alt="cat" />
                 <button className = {styles.socialmediaBtn} type="button"> 
