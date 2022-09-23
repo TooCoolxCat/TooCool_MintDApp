@@ -310,11 +310,11 @@
   }
   .flexbox_item:nth-child(3){
     width:100vw;
-    height:80vw;
+    height: 90vw;
   }
   .flexbox_item:nth-child(4){
     width:100vw;
-    height:80vw;
+    height:90vw;
   }
   .flexbox_item:nth-child(5){
     width:100vw;
@@ -338,8 +338,8 @@
     transform: translate(10%, -40%);  
   }
   .item_AboutDodo{
-    width:140%;
-    transform: translate(-20%, -30%);  
+    width:160%;
+    transform: translate(-25%, -30%);  
   }
   .item_AboutTeam{
     width:100%;
