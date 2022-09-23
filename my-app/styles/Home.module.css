@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "pixelmix";
   src: url('../fonts/pixelmix.ttf');
@@ -7,9 +8,9 @@
 
 .app{
   min-height: 90vh;
-  background-image: url(/ele/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(/ele/background_1.png);
+  background-repeat: repeat;
+  background-size: auto;
   background-position: fixed;
 }
 .nav{
@@ -21,32 +22,26 @@
 }
 
 .main {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   font-family: "pixelmix","Courier New", Courier, monospace;
-}
-
-.footer {
-  display: flex;
-  padding: 2rem 0;
-  /* border-top: 1px solid #eaeaea; */
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
 }
 
 .socialmediaBtn {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  z-index:1;
 }
 
 .socialmediaIMG {
   width:auto;
   height:50px;
-  padding-right:21px;
+  padding-right:18px;
 }
 
 
@@ -99,17 +94,14 @@
 }
 
 .buttonContainer{
-  position:fixed;
-  height: auto;
-  right:10%;
-  bottom:10%;
-  z-index:1;
-  text-align: center;
-  cursor: pointer;
+  position:absolute;
+  top:84%;
+  right:9%;
+  width: 40%;
 }
 
 .buttonImage{
-  width: 55%;
+  width: 100%;
 }
 
 .buttonText{
@@ -118,6 +110,92 @@
   left: 60%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
+}
+.flexbox_desktop{
+  display: flex; 
+  flex-direction: row;
+  justify-content:  center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap:2rem;
+  /* margin-top:120%; */
+}
+.flexbox_mobile{
+  display:none;
+}
+
+.flexbox_item{
+  max-width:100vw;
+  /* border: 5px solid black;
+  background-color: white; */
+}
+.flexbox_item:nth-child(1){
+  width:100vw;
+  height:30px;
+}
+.flexbox_item:nth-child(2){
+  width:40vw;
+  height:300px;
+}
+.flexbox_item:nth-child(3){
+  width:50vw;
+  height:300px;
+}
+.flexbox_item:nth-child(4){
+  width:100vw;
+  height:450px;
+}
+.flexbox_item:nth-child(5){
+  width:100vw;
+  height:450px;
+}
+
+.item_AboutTooCoolDesktop{
+  position: absolute;
+  width:35%;
+  height:50%;
+  top: 20%;
+  left: 65%;
+}
+.item_AboutTeamDesktop{
+  width:100%;
+  transform: translate(0%, 0%);
+}
+.item_BenefitDesktop{  
+  width:60%;
+  transform: translate(60%, -15%);
+}
+.item_AboutNFTDesktop{
+  width:50%;
+  transform: translate(60%, 20%);  
+}
+.item_AboutDodoDesktop{
+  width:90%;
+  transform: translate(0%, -15%);  
+  order:2;
+}
+
+.item_cat{
+  transform: translate(0%, 0%);  
+  order:2;
+}
+.item_Roadmap{
+  width:100%;
+  bottom: 0;
+}
+.item_Roadmap_mobile{
+  display:none;
+}
+
+.footer{
+  display:absolute;
+  bottom:0;
+}
+
+.footerNav{
+  position: absolute;
+  right:0;
+  transform: translate(0%, -150%); 
 }
 
 @media (max-width: 800px) {
@@ -140,7 +218,6 @@
     margin-left:13px;
   }
 
-
   .socialmediaIMG {
     width:auto;
     height:40px;
@@ -154,7 +231,7 @@
   }
 
   .screenContainer{
-    position: relative;
+    position: absolute;
     margin-top:25%;
     width:160%;
     left:-30%;
@@ -188,19 +265,101 @@
   }
 
   .buttonContainer{
-    position:fixed;
+    position:absolute;
     height: auto;
-    right:0%;
-    bottom:12%;
+    right:10%;
+    top:30%;
     z-index:1;
 
   }
   .buttonImage{
-    width: 50%;
+    width: 150%;
   }
 
-  .footer {
-    display: flex;
-    padding: 4rem 0;
+  .flexbox_desktop{
+    display: none;
+  }
+  
+  .flexbox_mobile{
+    display: flex; 
+    flex-direction: column;
+    justify-content:  center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-top:120%;
+  }
+  .flexbox_item{
+    max-width:100vw;
+    /* border: 5px solid black;
+    background-color: white; */
+  }
+  .flexbox_item:nth-child(1){
+    width: 100vw;
+    height:350px;
+  }
+  .flexbox_item:nth-child(2){
+    width:100vw;
+    height:400px;
+  }
+  .flexbox_item:nth-child(3){
+    width:100vw;
+    height:400px;
+  }
+  .flexbox_item:nth-child(4){
+    width:100vw;
+    height:450px;
+  }
+  .flexbox_item:nth-child(5){
+    width:100vw;
+    height:450px;
+  }
+  
+  .item_AboutTooCoolDesktop{
+    position: relative;
+    width:80%;
+    height:auto;
+    top: 0%;
+    left: 0%;
+    transform: translate(25%, 0%);
+  }
+  .item_BenefitDesktop{  
+    width:70%;
+    transform: translate(30%, -18%);
+  }
+  .item_AboutNFTDesktop{
+    width:80%;
+    transform: translate(10%, -40%);  
+  }
+  .item_AboutDodoDesktop{
+    width:120%;
+    transform: translate(-20%, -30%);  
+  }
+  .item_AboutTeamDesktop{
+    width:100%;
+    transform: translate(0%, 0%);
+  }
+ 
+  .item_Roadmap{
+    display:none;
+  }
+  .item_Roadmap_mobile{
+    display: block;
+    width:100%;
+    bottom: 0;
+  }
+  
+  .footer{
+    display:absolute;
+    bottom:0;
+  }
+  
+  .footerNav{
+    position: absolute;
+    right:0;
+    transform: translate(0%, -250%); 
+  }
+  .catItem{
+    display:none;
   }
 }

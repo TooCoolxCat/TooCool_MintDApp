@@ -372,7 +372,7 @@ const checkTransactionAddress = async () => {
   */
   const renderScreen = () =>{
     if (!walletConnected) {
-      return <img className = {styles.screenFrame}  src="./ele/frontImage1.png"  alt="cool computer" />
+      return <img className = {styles.screenFrame}  src="./ele/Front_pc.gif"  alt="cool computer" />
     }
 
     if (!presaleStarted && !presaleEnded) {
@@ -396,13 +396,7 @@ const checkTransactionAddress = async () => {
 if (!walletConnected) {
   return (
     <div>
-      <div className={styles.descriptionLarge}>
-      3333 <br></br> SOLD OUT❣️
-      </div>
-      <div className={styles.description}>
-      Get your TooCool <br></br>
-       @ marketplace 🥳
-      </div>
+   
     </div>
   );
 }
@@ -586,36 +580,106 @@ return (
           </a>            
           <button className = {styles.socialmediaBtn} type="button"> 
               <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
-                <img className = {styles.socialmediaIMG} src="./ele/btn-opensea.png" alt="opensea-logo" />
+                <img className = {styles.socialmediaIMG} src="./ele/button_opensea.png" alt="opensea-logo" />
               </a>  </button>
           
           <button className ={styles.socialmediaBtn} type="button"> 
               <a href="https://www.instagram.com/toocoolxcat/" target="_blank" rel="noreferrer">
-                <img className = {styles.socialmediaIMG}  src="./ele/btn-ins.png"  alt="ins-logo" />
+                <img className = {styles.socialmediaIMG}  src="./ele/button_instagram.png"  alt="ins-logo" />
              </a>  </button>
 
             <button className ={styles.socialmediaBtn} type="button">
             <a href="https://twitter.com/toocoolXcat" target="_blank" rel="noreferrer">
-              <img className = {styles.socialmediaIMG}  src="./ele/btn-twitter.png" alt="twitter-logo" />
+              <img className = {styles.socialmediaIMG}  src="./ele/button_twitter.png" alt="twitter-logo" />
+              </a> </button>
+
+            <button className ={styles.socialmediaBtn} type="button">
+            <a href="https://discord.gg/dcQvyqEEs7" target="_blank" rel="noreferrer">
+              <img className = {styles.socialmediaIMG}  src="./ele/button_discord.png" alt="discord-logo" />
               </a> </button>
     </div>
       <div className={styles.main}>
-        <div>
+        <div className={styles.mainContent}>
         <img className={styles.title} src="./ele/title_dolander.gif" alt="logo" />
+
           <div className={styles.screenContainer}>
                 {renderScreen()}
               <div className={styles.screenContent}>
                 {renderDescription()}
               </div>
           </div>
+
           <div className={styles.buttonContainer}>
              {renderButton()}
           </div>
-     
-        </div>
-      </div>
 
-      <footer className={styles.footer}>&#10084; Made with Beauty and Love &#10084;</footer>
+          <div  className={styles.flexbox_desktop}>
+            <div className={styles.flexbox_item}>
+              <img className={styles.item_AboutTooCoolDesktop} src="./ele/AboutTooCool.png" alt="AboutTooCool" />
+            </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutTeamDesktop} src="./ele/AboutTeam.png" alt="AboutTeam" />
+            </div>
+            <div className={styles.flexbox_item}> 
+               <img  className={styles.item_BenefitDesktop}src="./ele/Benefits.png" alt="Benefits" />
+            </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutNFTDesktop}  src="./ele/AboutNFT.png" alt="AboutNFT" />
+             </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutDodoDesktop}  src="./ele/AboutDodo.png" alt="AboutDodo" /> 
+            </div>           
+          </div>
+
+          <div  className={styles.flexbox_mobile}>
+            <div className={styles.flexbox_item}>
+              <img className={styles.item_AboutTooCoolDesktop} src="./ele/AboutTooCool.png" alt="AboutTooCool" />
+            </div>
+            <div className={styles.flexbox_item}> 
+              <img  className={styles.item_BenefitDesktop}src="./ele/Benefits_mobile.png" alt="Benefits" />
+            </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutNFTDesktop}  src="./ele/AboutNFT_mobile.png" alt="AboutNFT" />
+            </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutDodoDesktop}  src="./ele/AboutDodo_mobile.png" alt="AboutDodo" /> 
+            </div>
+            <div className={styles.flexbox_item}>
+               <img  className={styles.item_AboutTeamDesktop} src="./ele/AboutTeam_mobile.png" alt="AboutTeam" />
+            </div>
+
+          </div>
+
+           <div className={styles.footer}>
+           <img  className={styles.item_Roadmap}  src="./ele/Roadmap.png" alt="AboutDodo" />
+           <img  className={styles.item_Roadmap_mobile}  src="./ele/Roadmap_mobile.png" alt="AboutDodo" />
+              <div className={styles.footerNav}>
+              <img  className={`${styles.socialmediaBtn} ${styles.catItem}`} src="./ele/catIcon.png" alt="cat" />
+                <button className = {styles.socialmediaBtn} type="button"> 
+                      <a href="https://opensea.io/collection/toocooldolander"  target="_blank" rel="noreferrer">
+                        <img className = {styles.socialmediaIMG} src="./ele/button_opensea.png" alt="opensea-logo" />
+                      </a>  </button>
+                  
+                  <button className ={styles.socialmediaBtn} type="button"> 
+                      <a href="https://www.instagram.com/toocoolxcat/" target="_blank" rel="noreferrer">
+                        <img className = {styles.socialmediaIMG}  src="./ele/button_instagram.png"  alt="ins-logo" />
+                    </a>  </button>
+
+                    <button className ={styles.socialmediaBtn} type="button">
+                    <a href="https://twitter.com/toocoolXcat" target="_blank" rel="noreferrer">
+                      <img className = {styles.socialmediaIMG}  src="./ele/button_twitter.png" alt="twitter-logo" />
+                      </a> </button>
+
+                    <button className ={styles.socialmediaBtn} type="button">
+                    <a href="https://discord.gg/dcQvyqEEs7" target="_blank" rel="noreferrer">
+                      <img className = {styles.socialmediaIMG}  src="./ele/button_discord.png" alt="discord-logo" />
+                      </a> </button>
+               </div>
+ 
+            </div>
+        </div>
+
+      </div>
     </div>
   );
 }
